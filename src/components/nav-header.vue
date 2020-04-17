@@ -1,10 +1,14 @@
 <template>
-  <div class="footer">footer</div>
+  <div class="header">
+    <i class="iconfont xiaomi-cart"></i>
+
+    header
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'nav-footer',
+  name: 'nav-header',
 };
 </script>
 
