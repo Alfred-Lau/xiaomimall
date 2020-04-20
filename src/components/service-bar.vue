@@ -46,7 +46,7 @@ export default {};
       &-icon {
         width: 20px;
         height: 19px;
-        background-size: 20px;
+        background-size: contain;
         /* 下面这行很关键 */
         display: inline-block;
       }
