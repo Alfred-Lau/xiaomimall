@@ -3,7 +3,7 @@ import Vue from 'vue';
 
 import Home from './pages/home';
 import Index from './pages/index';
-import Product from './pages/product.vue';
+// import Product from './pages/product.vue';
 
 Vue.use(Router);
 
@@ -18,10 +18,19 @@ const routes = [
         name: 'index',
         component: Index,
       },
+      // {
+      //   path: '/product/:id',
+      //   name: 'product',
+      //   /* 第一种按需加载方式 */
+      //   component: (resolve) => require(['./pages/product.vue'], resolve),
+      // },
+
       {
         path: '/product/:id',
         name: 'product',
-        component: Product,
+        /* 第一种按需加载方式 */
+        component: () =>
+          import(/* webpackChunkName:"product"*/ './pages/product.vue'),
       },
     ],
   },

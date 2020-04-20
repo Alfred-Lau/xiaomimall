@@ -72,7 +72,7 @@ export default {
       /* 这个就比较吊了 */
       swiperOptions: {
         /* basic */
-        // autoplay: true,
+        autoplay: true,
         loop: true,
         effect: 'cube',
         cubeEffect: {
@@ -127,13 +127,19 @@ export default {
 </script>
 
 <style lang="scss">
+@import '../assets/scss/config.scss';
+// @import '../assets/scss/mixn.scss';
+
 .index {
+  width: $min-width;
+  margin: auto;
   .container {
     /* 设置插件 */
     .swiper-button-prev {
       left: 274px;
     }
     width: 100%;
+    // @include middle();
     .swiper-box {
       position: relative;
       width: 100%;
