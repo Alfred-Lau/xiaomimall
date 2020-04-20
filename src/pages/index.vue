@@ -1,9 +1,12 @@
 <template>
-  <div class="index">我是首页</div>
+  <div class="index">
+    <service-bar></service-bar>
+  </div>
 </template>
 
 <script>
 import { mapState, mapMutations, mapActions, mapGetters } from 'vuex';
+import ServiceBar from '../components/service-bar';
 
 export default {
   name: 'index',
@@ -11,7 +14,9 @@ export default {
     this.$$storage.setItem('name', 'liushanzhuo', 'users');
     // alert(this.$$storage.getItem('name', 'users'));
   },
-
+  components: {
+    ServiceBar,
+  },
   mounted() {
     console.log(
       this.count,
