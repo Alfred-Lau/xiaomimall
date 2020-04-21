@@ -38,3 +38,25 @@
 7. nginx 推荐 yum 安装，node 可以直接 wget + ln
 
 8. 上传源码可以通过 ftp
+
+9. 多行多列的展示可以数据映射为 多维数组做样式！
+
+10. div 包 img
+
+11. v-for:'item in [[1,2],[3,4]]'
+
+12. flex + width 实现一行多个
+
+13. splice 和 slice 的区别？？？
+
+14. 插槽的语法： slot+name 结合 template + v-slot:
+
+！！！15. width 和 height 不管干什么，除非有限制，否则优先考虑设置！！！
+
+16. chrome 调试工具 添加一个类，直接添加一个现有的类
+
+17. enter 要放在 active 动画样式下面！！！
+
+18. 自定义事件 @click="\$emit('submit')"
+
+19. 图片懒加载的实现 vue-lazyload v-lazy=''
