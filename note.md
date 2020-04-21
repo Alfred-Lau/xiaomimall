@@ -60,3 +60,5 @@
 18. 自定义事件 @click="\$emit('submit')"
 
 19. 图片懒加载的实现 vue-lazyload v-lazy=''
+
+20. 类名或者图片名称出现 ad 字样会被插件拦截

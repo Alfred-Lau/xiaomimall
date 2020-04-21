@@ -24,7 +24,19 @@
         <div class="logo-wrapper"></div>
         <div class="nav-menu-wrapper">
           <ul>
-            <li class="nav-menu-item">小米手机</li>
+            <li class="nav-menu-item">
+              小米手机
+              <div class="sub-menu">
+                <ul class="sub-menu-list">
+                  <li class="sub-menu-item">手机</li>
+                  <li class="sub-menu-item">手机</li>
+                  <li class="sub-menu-item">手机</li>
+                  <li class="sub-menu-item">手机</li>
+                  <li class="sub-menu-item">手机</li>
+                  <li class="sub-menu-item">手机</li>
+                </ul>
+              </div>
+            </li>
             <li class="nav-menu-item">红米</li>
             <li class="nav-menu-item">电视</li>
           </ul>
@@ -112,6 +124,25 @@ export default {
             padding: 0 18px;
             left: -200px;
             position: relative;
+
+            .sub-menu {
+              display: none;
+            }
+
+            &:hover {
+              .sub-menu {
+                display: block;
+                position: absolute;
+                width: 1226px;
+                height: 220px;
+                background: rgba(255, 255, 255, 1);
+                box-shadow: 0px 7px 6px 0px rgba(0, 0, 0, 0.11);
+                .sub-menu-list {
+                  display: flex;
+                  justify-content: space-between;
+                }
+              }
+            }
           }
         }
       }

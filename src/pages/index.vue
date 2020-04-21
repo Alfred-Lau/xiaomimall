@@ -46,8 +46,15 @@
           <div class="swiper-pagination" slot="pagination"></div>
         </swiper>
       </div>
-      <div class="ads-box"></div>
-      <div class="banner"></div>
+      <div class="as-box">
+        <div class="a-box"><img src="/imgs/as/as-1.png" alt="" /></div>
+        <div class="a-box"><img src="/imgs/as/as-2.jpg" alt="" /></div>
+        <div class="a-box"><img src="/imgs/as/as-3.png" alt="" /></div>
+        <div class="a-box"><img src="/imgs/as/as-4.jpg" alt="" /></div>
+      </div>
+      <div class="banner">
+        <img src="/imgs/banner-1.png" alt="" />
+      </div>
       <div class="products-box"></div>
     </div>
     <service-bar></service-bar>
@@ -188,6 +195,32 @@ export default {
             }
           }
         }
+      }
+    }
+
+    .as-box {
+      margin: 20px auto;
+      display: flex;
+      justify-content: space-between;
+      .a-box {
+        width: 24%;
+        margin-right: 10px;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+    .banner {
+      img {
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 20px;
       }
     }
   }
