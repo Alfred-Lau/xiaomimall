@@ -28,17 +28,149 @@
               小米手机
               <div class="sub-menu">
                 <ul class="sub-menu-list">
-                  <li class="sub-menu-item">手机</li>
-                  <li class="sub-menu-item">手机</li>
-                  <li class="sub-menu-item">手机</li>
-                  <li class="sub-menu-item">手机</li>
-                  <li class="sub-menu-item">手机</li>
-                  <li class="sub-menu-item">手机</li>
+                  <li class="sub-menu-item">
+                    <div class="item-img">
+                      <img src="/imgs/nav-img/nav-1.png" alt="" />
+                    </div>
+                    <h3 class="item-title">手机</h3>
+                    <p class="item-desc">2000元</p>
+                  </li>
+                  <li class="sub-menu-item">
+                    <div class="item-img">
+                      <img src="/imgs/nav-img/nav-1.png" alt="" />
+                    </div>
+                    <h3 class="item-title">手机</h3>
+                    <p class="item-desc">2000元</p>
+                  </li>
+                  <li class="sub-menu-item">
+                    <div class="item-img">
+                      <img src="/imgs/nav-img/nav-1.png" alt="" />
+                    </div>
+                    <h3 class="item-title">手机</h3>
+                    <p class="item-desc">2000元</p>
+                  </li>
+                  <li class="sub-menu-item">
+                    <div class="item-img">
+                      <img src="/imgs/nav-img/nav-1.png" alt="" />
+                    </div>
+                    <h3 class="item-title">手机</h3>
+                    <p class="item-desc">2000元</p>
+                  </li>
+                  <li class="sub-menu-item">
+                    <div class="item-img">
+                      <img src="/imgs/nav-img/nav-1.png" alt="" />
+                    </div>
+                    <h3 class="item-title">手机</h3>
+                    <p class="item-desc">2000元</p>
+                  </li>
+                  <li class="sub-menu-item">
+                    <div class="item-img">
+                      <img src="/imgs/nav-img/nav-1.png" alt="" />
+                    </div>
+                    <h3 class="item-title">手机</h3>
+                    <p class="item-desc">2000元</p>
+                  </li>
                 </ul>
               </div>
             </li>
-            <li class="nav-menu-item">红米</li>
-            <li class="nav-menu-item">电视</li>
+            <li class="nav-menu-item">
+              红米
+              <div class="sub-menu">
+                <ul class="sub-menu-list">
+                  <li class="sub-menu-item">
+                    <div class="item-img">
+                      <img src="/imgs/nav-img/nav-1.png" alt="" />
+                    </div>
+                    <h3 class="item-title">手机</h3>
+                    <p class="item-desc">2000元</p>
+                  </li>
+                  <li class="sub-menu-item">
+                    <div class="item-img">
+                      <img src="/imgs/nav-img/nav-1.png" alt="" />
+                    </div>
+                    <h3 class="item-title">手机</h3>
+                    <p class="item-desc">2000元</p>
+                  </li>
+                  <li class="sub-menu-item">
+                    <div class="item-img">
+                      <img src="/imgs/nav-img/nav-1.png" alt="" />
+                    </div>
+                    <h3 class="item-title">手机</h3>
+                    <p class="item-desc">2000元</p>
+                  </li>
+                  <li class="sub-menu-item">
+                    <div class="item-img">
+                      <img src="/imgs/nav-img/nav-1.png" alt="" />
+                    </div>
+                    <h3 class="item-title">手机</h3>
+                    <p class="item-desc">2000元</p>
+                  </li>
+                  <li class="sub-menu-item">
+                    <div class="item-img">
+                      <img src="/imgs/nav-img/nav-1.png" alt="" />
+                    </div>
+                    <h3 class="item-title">手机</h3>
+                    <p class="item-desc">2000元</p>
+                  </li>
+                  <li class="sub-menu-item">
+                    <div class="item-img">
+                      <img src="/imgs/nav-img/nav-1.png" alt="" />
+                    </div>
+                    <h3 class="item-title">手机</h3>
+                    <p class="item-desc">2000元</p>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-menu-item">
+              电视
+              <div class="sub-menu">
+                <ul class="sub-menu-list">
+                  <li class="sub-menu-item">
+                    <div class="item-img">
+                      <img src="/imgs/nav-img/nav-1.png" alt="" />
+                    </div>
+                    <h3 class="item-title">手机</h3>
+                    <p class="item-desc">2000元</p>
+                  </li>
+                  <li class="sub-menu-item">
+                    <div class="item-img">
+                      <img src="/imgs/nav-img/nav-1.png" alt="" />
+                    </div>
+                    <h3 class="item-title">手机</h3>
+                    <p class="item-desc">2000元</p>
+                  </li>
+                  <li class="sub-menu-item">
+                    <div class="item-img">
+                      <img src="/imgs/nav-img/nav-1.png" alt="" />
+                    </div>
+                    <h3 class="item-title">手机</h3>
+                    <p class="item-desc">2000元</p>
+                  </li>
+                  <li class="sub-menu-item">
+                    <div class="item-img">
+                      <img src="/imgs/nav-img/nav-1.png" alt="" />
+                    </div>
+                    <h3 class="item-title">手机</h3>
+                    <p class="item-desc">2000元</p>
+                  </li>
+                  <li class="sub-menu-item">
+                    <div class="item-img">
+                      <img src="/imgs/nav-img/nav-1.png" alt="" />
+                    </div>
+                    <h3 class="item-title">手机</h3>
+                    <p class="item-desc">2000元</p>
+                  </li>
+                  <li class="sub-menu-item">
+                    <div class="item-img">
+                      <img src="/imgs/nav-img/nav-1.png" alt="" />
+                    </div>
+                    <h3 class="item-title">手机</h3>
+                    <p class="item-desc">2000元</p>
+                  </li>
+                </ul>
+              </div>
+            </li>
           </ul>
         </div>
         <div class="search-box">
@@ -109,6 +241,7 @@ export default {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: relative;
       .logo-wrapper {
         background: url('/imgs/logo-mi.png');
         background-size: 52px;
@@ -116,17 +249,27 @@ export default {
         height: 52px;
       }
       .nav-menu-wrapper {
+        margin-left: -200px;
         ul {
           display: flex;
           .nav-menu-item {
             font-size: 16px;
             color: #333;
             padding: 0 18px;
-            left: -200px;
-            position: relative;
+
+            &:hover {
+              color: #f60;
+              cursor: pointer;
+            }
 
             .sub-menu {
-              display: none;
+              // display: none;
+              width: 0;
+              height: 0;
+              opacity: 0;
+              /* 下面两行很重要，因为要先把东西放到正确的地方！！！ */
+              position: absolute;
+              left: 0;
             }
 
             &:hover {
@@ -135,11 +278,32 @@ export default {
                 position: absolute;
                 width: 1226px;
                 height: 220px;
+                opacity: 1;
+                top: 110px;
                 background: rgba(255, 255, 255, 1);
                 box-shadow: 0px 7px 6px 0px rgba(0, 0, 0, 0.11);
+                z-index: 20;
+                transition: opacity 0.5s, height 0.5s;
                 .sub-menu-list {
                   display: flex;
                   justify-content: space-between;
+                  .sub-menu-item {
+                    width: 16.6%;
+                    text-align: center;
+                    .item-img {
+                      margin-top: 26px;
+                      img {
+                        width: 92px;
+                        // height: 111px;
+                      }
+                    }
+                    .item-title {
+                      color: #333;
+                      font-size: 12px;
+                    }
+                    .item.desc {
+                    }
+                  }
                 }
               }
             }
