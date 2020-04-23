@@ -7,24 +7,31 @@
             <ul class="menu">
               <li class="menu-item">
                 <a href="" class="menu-link">手机 电话卡</a>
+                <div class="show-child">我是二级子菜单</div>
               </li>
               <li class="menu-item">
                 <a href="" class="menu-link">电视 盒子</a>
+                <div class="show-child">我是二级子菜单</div>
               </li>
               <li class="menu-item">
                 <a href="" class="menu-link">笔记本 平板</a>
+                <div class="show-child">我是二级子菜单</div>
               </li>
               <li class="menu-item">
                 <a href="" class="menu-link">家电 插线板</a>
+                <div class="show-child">我是二级子菜单</div>
               </li>
               <li class="menu-item">
                 <a href="" class="menu-link">出行 穿戴</a>
+                <div class="show-child">我是二级子菜单</div>
               </li>
               <li class="menu-item">
                 <a href="" class="menu-link">耳机 音响</a>
+                <div class="show-child">我是二级子菜单</div>
               </li>
               <li class="menu-item">
                 <a href="" class="menu-link">电源 配件</a>
+                <div class="show-child">我是二级子菜单</div>
               </li>
               <li class="menu-item">
                 <a href="" class="menu-link">生活 箱包</a>
@@ -201,8 +208,18 @@ export default {
         background: #55585a7a;
         box-sizing: border-box;
         .menu-wrapper {
+          position: relative;
+
           .menu {
             .menu-item {
+              .show-child {
+                // display: none;
+                position: absolute;
+                top: -27px;
+                left: 263px;
+                width: 0;
+                opacity: 0;
+              }
               height: 50px;
               line-height: 50px;
               color: #fff;
@@ -229,6 +246,19 @@ export default {
               }
               &:hover {
                 background: #ff6600;
+                .show-child {
+                  display: block;
+                  width: 963px;
+                  height: 461px;
+                  opacity: 1;
+                  position: absolute;
+                  left: 264px;
+                  top: -27px;
+                  background: #fff;
+                  color: #ff6600;
+                  z-index: 21;
+                  transition: width 0.5s, opacity 0.5s;
+                }
               }
             }
           }
