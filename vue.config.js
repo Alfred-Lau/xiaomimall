@@ -3,7 +3,7 @@ module.exports = {
   productionSourceMap: false,
   chainWebpack(api) {
     api.plugin('html').tap((args) => {
-      args[0] = { ...args[0], title: '全球好物' };
+      args[0] = { ...args[0], title: 'Stay Hungry. Stay Focus.' };
       return args;
     });
 

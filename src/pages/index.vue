@@ -55,7 +55,44 @@
       <div class="banner">
         <img src="/imgs/banner-1.png" alt="" />
       </div>
-      <div class="products-box"></div>
+    </div>
+    <div class="products-box">
+      <div class="container">
+        <h3 class="title">手机</h3>
+        <div class="show">
+          <div class="left-show">
+            <div class="container">
+              <img src="/imgs/mix-alpha.jpg" alt="mix-alpha" srcset="" />
+            </div>
+          </div>
+          <div class="right-show">
+            <div class="right-show-container">
+              <ul class="products-all">
+                <li
+                  v-for="(items, index) in [
+                    [1, 2, 3, 4],
+                    [5, 6, 7, 8],
+                  ]"
+                  :key="index"
+                  class="products-row"
+                >
+                  <ul class="item-wrapper">
+                    <li v-for="item in items" :key="item" class="item">
+                      <div class="tag">新品</div>
+                      <div class="img-wrapper">
+                        <img src="/imgs/nav-img/nav-2.png" alt="" />
+                      </div>
+                      <h3 class="title">小米手机</h3>
+                      <p class="desc">我是描述</p>
+                      <p class="price">2999元</p>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <service-bar></service-bar>
   </div>
@@ -138,14 +175,15 @@ export default {
 // @import '../assets/scss/mixn.scss';
 
 .index {
-  width: $min-width;
-  margin: auto;
+  width: 100%;
   .container {
+    margin: auto;
+    width: $min-width;
+
     /* 设置插件 */
     .swiper-button-prev {
       left: 274px;
     }
-    width: 100%;
     // @include middle();
     .swiper-box {
       position: relative;
@@ -221,6 +259,108 @@ export default {
         width: 100%;
         margin-top: 20px;
         margin-bottom: 20px;
+      }
+    }
+  }
+
+  .products-box {
+    width: 100%;
+    background: rgba(245, 245, 245, 1);
+    padding: 71px auto 50px;
+    padding-bottom: 50px;
+    .container {
+      .title {
+        font-size: 22px;
+        font-family: FZLanTingHeiS-R-GB;
+        font-weight: bold;
+        color: rgba(51, 51, 51, 1);
+        line-height: 60px;
+      }
+
+      .show {
+        display: flex;
+      }
+
+      .left-show {
+        width: 224px;
+        .container {
+          width: 100%;
+          img {
+            width: 224px;
+            height: 619px;
+          }
+        }
+      }
+
+      .right-show {
+        width: 100%;
+        .right-show-container {
+          margin-left: 15px;
+          width: 100%;
+          .products-all {
+            .products-row {
+              display: block;
+              .item-wrapper {
+                display: flex;
+                justify-content: space-between;
+                .item {
+                  width: 236px;
+                  height: 302px;
+                  background: rgba(255, 255, 255, 1);
+                  text-align: center;
+                  margin-bottom: 14px;
+
+                  .img-wrapper {
+                    width: 195px;
+                    height: 172px;
+                    margin: 0 auto;
+                    img {
+                      width: 100%;
+                      margin-top: 20px;
+                    }
+                  }
+
+                  .tag {
+                    background: rgba(126, 207, 104, 1);
+                    color: #fff;
+                    width: 67px;
+                    line-height: 24px;
+                    height: 24px;
+                    margin: 0 auto;
+                  }
+
+                  .title {
+                    margin-top: 10px;
+                    font-size: 14px;
+                    color: rgba(51, 51, 51, 1);
+                    font-family: FZLanTingHeiS-R-GB;
+                    font-weight: bold;
+                    line-height: 24px;
+                  }
+
+                  .desc {
+                    height: 13px;
+                    font-size: 12px;
+                    line-height: 20px;
+                    color: rgba(153, 153, 153, 1);
+                    font-family: FZLanTingHeiS-R-GB;
+                    font-weight: bold;
+                  }
+
+                  .price {
+                    height: 13px;
+                    font-size: 14px;
+                    line-height: 22px;
+                    color: rgba(242, 10, 10, 1);
+                    font-family: FZLanTingHeiS-R-GB;
+                    margin-top: 15px;
+                    font-weight: bold;
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
