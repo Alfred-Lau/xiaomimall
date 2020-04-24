@@ -3,6 +3,7 @@ import Vue from 'vue';
 
 import Home from './pages/home';
 import Index from './pages/index';
+// import Login from './pages/login';
 // import Product from './pages/product.vue';
 
 Vue.use(Router);
@@ -33,6 +34,11 @@ const routes = [
           import(/* webpackChunkName:"product"*/ './pages/product.vue'),
       },
     ],
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: () => import(/* webpackChunkName:"login"*/ './pages/login.vue'),
   },
 ];
 

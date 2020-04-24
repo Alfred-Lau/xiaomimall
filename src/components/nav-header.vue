@@ -13,7 +13,7 @@
         <ul class="header-menu">
           <li class="header-menu-item">登录</li>
           <li class="header-menu-item">注册</li>
-          <li class="header-menu-item cart">
+          <li class="header-menu-item cart" @click="gotoCart">
             <i class="iconfont xiaomi-cart "></i> 购物车
           </li>
         </ul>
@@ -183,8 +183,21 @@
 </template>
 
 <script>
+const Token = Symbol('__username__');
 export default {
   name: 'nav-header',
+  methods: {
+    gotoCart() {
+      /* 验证是否登录 */
+      const cookie = this.$cookie.get(Token);
+      if (!cookie) {
+        // 前端重定向到登录页
+        this.$router.push('/login');
+      } else {
+        this.$router.push('/cart');
+      }
+    },
+  },
 };
 </script>
 
@@ -216,6 +229,7 @@ export default {
     &-right {
       .header-menu {
         display: flex;
+        cursor: pointer;
         &-item {
           padding-left: 10px;
           padding-right: 10px;

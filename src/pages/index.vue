@@ -102,12 +102,14 @@
       </div>
     </div>
     <service-bar></service-bar>
+    <modal></modal>
   </div>
 </template>
 
 <script>
 import { mapState, mapMutations, mapActions, mapGetters } from 'vuex';
 import ServiceBar from '../components/service-bar';
+import Modal from '../components/modal';
 import { Swiper, SwiperSlide } from 'vue-awesome-swiper';
 
 import 'swiper/css/swiper.css';
@@ -156,6 +158,7 @@ export default {
     Swiper,
     SwiperSlide,
     ServiceBar,
+    Modal,
   },
   mounted() {
     console.log(
