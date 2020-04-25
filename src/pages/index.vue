@@ -107,7 +107,6 @@
 </template>
 
 <script>
-import { mapState, mapMutations, mapActions, mapGetters } from 'vuex';
 import ServiceBar from '../components/service-bar';
 import Modal from '../components/modal';
 import { Swiper, SwiperSlide } from 'vue-awesome-swiper';
@@ -160,23 +159,9 @@ export default {
     ServiceBar,
     Modal,
   },
-  mounted() {
-    console.log(
-      this.count,
-      this.getCounter,
-      this.$store.dispatch('getList'),
-      this.$store.commit('increase', { count: 5 }),
-      this.$store.state
-    );
-  },
-  computed: {
-    ...mapState(['count']),
-    ...mapGetters(['getCounter']),
-  },
-  methods: {
-    ...mapMutations(['increase']),
-    ...mapActions(['getList']),
-  },
+  mounted() {},
+  computed: {},
+  methods: {},
 };
 </script>
 

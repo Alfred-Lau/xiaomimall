@@ -10,9 +10,16 @@
         </ul>
       </div>
       <div class="header-top-right">
-        <ul class="header-menu">
+        <ul class="header-menu" v-if="isLogined">
           <li class="header-menu-item">登录</li>
           <li class="header-menu-item">注册</li>
+          <li class="header-menu-item cart" @click="gotoCart">
+            <i class="iconfont xiaomi-cart "></i> 购物车
+          </li>
+        </ul>
+        <ul class="header-menu" v-else>
+          <li class="header-menu-item">用户名</li>
+          <li class="header-menu-item">我的订单</li>
           <li class="header-menu-item cart" @click="gotoCart">
             <i class="iconfont xiaomi-cart "></i> 购物车
           </li>
@@ -183,13 +190,28 @@
 </template>
 
 <script>
-const Token = Symbol('__username__');
 export default {
   name: 'nav-header',
+  data() {
+    return {
+      isLogined: false,
+    };
+  },
+  mounted() {
+    const cookie = this.cookie;
+    if (cookie) {
+      console.log(cookie);
+    }
+  },
+  computed: {
+    cookie() {
+      return this.$cookie.get('userinfo');
+    },
+  },
   methods: {
     gotoCart() {
       /* 验证是否登录 */
-      const cookie = this.$cookie.get(Token);
+      const cookie = this.cookie;
       if (!cookie) {
         // 前端重定向到登录页
         this.$router.push('/login');

@@ -29,7 +29,7 @@
           />
           <input
             type="button"
-            @submit="onSubmit"
+            @click="onSubmit"
             class="login-btn"
             value="登录"
           />
@@ -58,6 +58,8 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex';
+
 export default {
   name: 'login',
   data() {
@@ -67,12 +69,28 @@ export default {
     };
   },
   methods: {
+    ...mapActions(['setLoginInfo']),
     onSubmit() {
       /* 处理登录逻辑 */
       const { username, password } = this;
       if (!username || !password) {
         alert('请输入用户名和密码');
         return;
+      }
+
+      /* 模拟数据提交验证 */
+      if (username === 'admin' && password === '123456') {
+        const payload = {
+          username,
+          password,
+        };
+        // alert('恭喜，登录成功');
+        /* 设置 cookie */
+        this.$cookie.set('userinfo', payload, { expire: 'Session' });
+        this.setLoginInfo(payload);
+        this.$router.push('/');
+      } else {
+        alert('登录失败');
       }
     },
   },
@@ -148,6 +166,9 @@ export default {
           line-height: 18px;
           background: rgba(255, 102, 0, 1);
           color: #fff;
+          &:hover {
+            cursor: pointer;
+          }
         }
       }
 
