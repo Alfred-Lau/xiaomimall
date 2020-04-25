@@ -86,7 +86,9 @@ export default {
         };
         // alert('恭喜，登录成功');
         /* 设置 cookie */
-        this.$cookie.set('userinfo', payload, { expire: 'Session' });
+        this.$cookie.set('userinfo', JSON.stringify(payload), {
+          expire: 'Session',
+        });
         this.setLoginInfo(payload);
         this.$router.push('/');
       } else {

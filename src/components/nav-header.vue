@@ -18,7 +18,7 @@
           </li>
         </ul>
         <ul class="header-menu" v-else>
-          <li class="header-menu-item">用户名</li>
+          <li class="header-menu-item">{{ username }}</li>
           <li class="header-menu-item">我的订单</li>
           <li class="header-menu-item cart" @click="gotoCart">
             <i class="iconfont xiaomi-cart "></i> 购物车
@@ -198,17 +198,27 @@ export default {
     };
   },
   mounted() {
-    const cookie = this.cookie;
+    const cookie = JSON.parse(this.cookie);
     if (cookie) {
       console.log(cookie);
+      this.reloadUserInfo(cookie);
     }
   },
   computed: {
     cookie() {
       return this.$cookie.get('userinfo');
     },
+    username() {
+      return this.$store.state.username;
+    },
   },
   methods: {
+    reloadUserInfo(info) {
+      this.$store.replaceState({
+        ...this.$store.state,
+        ...info,
+      });
+    },
     gotoCart() {
       /* 验证是否登录 */
       const cookie = this.cookie;
