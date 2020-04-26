@@ -35,17 +35,34 @@
       我是 slider-show
     </div>
 
-    <div class="container video-wrapper" @click="showVideo">
-      <img src="/imgs/product/gallery-1.png" />
-      <div class="video" :class="{ show: isShowVideo }">
-        <video
-          src="/imgs/product/video.mp4"
-          muted
-          autoplay="off"
-          controls="controls"
-        ></video>
-        <div class="close" @click="closeModal">
-          x
+    <div class="video-wrapper-container">
+      <div class="info">
+        <p>
+          60帧超慢动作摄影
+        </p>
+        <p>
+          慢慢回味每一瞬间的精彩
+        </p>
+        <div class="desc">
+          后置960帧电影般超慢动作视频，将眨眼间的美妙展现得淋漓尽致！ 更能AI
+          精准分析视频内容，15个场景智能匹配背景音效。
+        </div>
+      </div>
+      <div class="container video-wrapper" @click="showVideo">
+        <img src="/imgs/product/gallery-1.png" />
+        <div class="overlay" v-if="isShowVideo"></div>
+        <div class="video" :class="{ show: isShowVideo }">
+          <div class="inner">
+            <video
+              src="/imgs/product/video.mp4"
+              muted
+              autoplay="off"
+              controls="controls"
+            ></video>
+            <div class="close" @click.stop="closeModal">
+              x
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -63,9 +80,13 @@ export default {
   mounted() {
     const { id } = this.$route.params;
     this.loadData(id);
+    window.addEventListener('scroll', this.toggleFixed);
   },
   methods: {
-    closeModal() {
+    toggleFixed() {
+      const scrollTop = docume;
+    },
+    closeModal(e) {
       console.log('sss');
       this.isShowVideo = false;
     },
@@ -141,9 +162,16 @@ export default {
     }
   }
   .container {
+    position: relative;
     img {
       width: 100%;
     }
+  }
+
+  .img-info {
+    position: absolute;
+    top: 20%;
+    left: 50%;
   }
 
   .middle {
@@ -153,38 +181,89 @@ export default {
     }
   }
 
-  .video-wrapper {
-    position: relative;
+  .video-wrapper-container {
+    background: rgba(7, 7, 8, 1);
+    padding-bottom: 140px;
     margin-bottom: 20px;
 
-    .video {
-      opacity: 0;
+    .info {
       position: absolute;
-      top: -50%;
-      z-index: 0;
-      padding: 200px;
-    }
-
-    .show {
-      opacity: 1;
-      position: absolute;
-      width: 50%;
-      margin: 40px auto;
-      z-index: 20;
-      top: 50%;
+      margin-top: 82px;
+      margin-bottom: 58px;
       left: 50%;
-      transform: translate(-50%, -50%);
-      video {
-        width: 100%;
+      transform: translateX(-50%);
+      text-align: center;
+      p {
+        font-size: 60px;
+        font-family: PingFang SC;
+        font-weight: bold;
+        color: rgba(255, 255, 255, 1);
       }
-      .close {
+
+      .desc {
+        font-size: 24px;
+        font-family: PingFang SC;
+        color: #fff;
+        font-weight: bold;
+        color: rgba(255, 255, 255, 1);
+        line-height: 36px;
+      }
+    }
+    .video-wrapper {
+      position: relative;
+      margin-bottom: 20px;
+      padding-top: 370px;
+
+      width: 1226px;
+      height: 540px;
+      margin: auto;
+
+      .video {
+        opacity: 0;
         position: absolute;
-        top: -2px;
-        right: 10px;
-        z-index: 30;
-        font-size: 40px;
-        &:hover {
-          cursor: pointer;
+        top: -50%;
+        left: 50%;
+        z-index: 0;
+        padding: 200px;
+        /* must have */
+        transition: top 0.6s, opacity 0.6s;
+      }
+
+      .overlay {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #333;
+        opacity: 0.8;
+      }
+
+      .show {
+        opacity: 1;
+        position: absolute;
+        width: 50%;
+        margin: 40px auto;
+        z-index: 20;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        .inner {
+          width: 100%;
+          position: relative;
+          video {
+            width: 100%;
+          }
+        }
+        .inner .close {
+          position: absolute;
+          top: -2px;
+          right: 10px;
+          z-index: 30;
+          font-size: 40px;
+          &:hover {
+            cursor: pointer;
+          }
         }
       }
     }
