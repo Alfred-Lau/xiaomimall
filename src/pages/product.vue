@@ -5,6 +5,10 @@
 <script>
 export default {
   name: 'product',
+  mounted() {
+    const { id } = this.$route.params;
+    console.log('id', id);
+  },
 };
 </script>
 
