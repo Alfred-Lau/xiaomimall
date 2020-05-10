@@ -83,9 +83,7 @@ export default {
     window.addEventListener('scroll', this.toggleFixed);
   },
   methods: {
-    toggleFixed() {
-      const scrollTop = docume;
-    },
+    toggleFixed() {},
     closeModal(e) {
       console.log('sss');
       this.isShowVideo = false;
