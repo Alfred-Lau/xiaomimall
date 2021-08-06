@@ -1,24 +1,14 @@
 # xiaomimall
 
-## Project setup
-```
-yarn install
-```
+## 小米商城：
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+### 重点突破：
 
-### Compiles and minifies for production
-```
-yarn build
-```
+- 支付
+- 组件
+- 移动端
+- 电商业务
+- 用户
+- 业务闭环
 
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+[![CI](https://github.com/Alfred-Lau/xiaomimall/actions/workflows/aes.yml/badge.svg)](https://github.com/Alfred-Lau/xiaomimall/actions/workflows/aes.yml)

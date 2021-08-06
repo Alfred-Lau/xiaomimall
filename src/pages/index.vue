@@ -111,7 +111,7 @@ import ServiceBar from '../components/service-bar';
 import Modal from '../components/modal';
 import { Swiper, SwiperSlide } from 'vue-awesome-swiper';
 
-import 'swiper/css/swiper.css';
+import 'swiper/swiper-bundle.css';
 
 export default {
   name: 'index',
