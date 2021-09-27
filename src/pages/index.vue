@@ -107,16 +107,16 @@
 </template>
 
 <script>
-import ServiceBar from '../components/service-bar';
-import Modal from '../components/modal';
-import { Swiper, SwiperSlide } from 'vue-awesome-swiper';
+import ServiceBar from "../components/service-bar";
+import Modal from "../components/modal";
+import { swiper, swiperSlide } from "vue-awesome-swiper";
 
-import 'swiper/swiper-bundle.css';
+import "swiper/dist/css/swiper.css";
 
 export default {
-  name: 'index',
+  name: "index",
   created() {
-    this.$$storage.setItem('name', 'liushanzhuo', 'users');
+    this.$$storage.setItem("name", "liushanzhuo", "users");
     // alert(this.$$storage.getItem('name', 'users'));
   },
   data() {
@@ -126,36 +126,36 @@ export default {
         /* basic */
         autoplay: true,
         loop: true,
-        effect: 'cube',
+        effect: "cube",
         cubeEffect: {
           shadow: true,
         },
         /* 分页 */
         pagination: {
-          el: '.swiper-pagination',
+          el: ".swiper-pagination",
           clickable: true,
         },
         /* 前进后退 */
         navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
         },
       },
       swiperData: [
         {
           id: 1,
-          link: '',
+          link: "",
         },
         {
           id: 2,
-          link: '',
+          link: "",
         },
       ],
     };
   },
   components: {
-    Swiper,
-    SwiperSlide,
+    swiper,
+    swiperSlide,
     ServiceBar,
     Modal,
   },
@@ -165,15 +165,15 @@ export default {
 };
 </script>
 
-<style lang="scss">
-@import '../assets/scss/config.scss';
-// @import '../assets/scss/mixn.scss';
+<style lang="less">
+@import "../assets/less/config.less";
+// @import '../assets/less/mixn.less';
 
 .index {
   width: 100%;
   .container {
     margin: auto;
-    width: $min-width;
+    width: @min-width;
 
     /* 设置插件 */
     .swiper-button-prev {
@@ -188,7 +188,7 @@ export default {
       }
       .nav-menu {
         width: 264px;
-        height: 99.3%;
+        // height: 99.3%;
         position: absolute;
         z-index: 10;
         padding-top: 26px;
@@ -220,11 +220,11 @@ export default {
                 padding-left: 30px;
 
                 &:after {
-                  content: '';
+                  content: "";
                   position: absolute;
                   right: 30px;
                   top: 17.5px;
-                  background: url('/imgs/icon-arrow.png') no-repeat center;
+                  background: url("/imgs/icon-arrow.png") no-repeat center;
                   display: inline-block;
                   /* 图片相关，必须设置 */
                   width: 15px;

@@ -7,11 +7,11 @@
 </template>
 
 <script>
-import NavHeader from '../components/nav-header';
-import NavFooter from '../components/nav-footer';
+import NavHeader from "../components/nav-header";
+import NavFooter from "../components/nav-footer";
 
 export default {
-  name: 'Home',
+  name: "Home",
   components: {
     NavHeader,
     NavFooter,
@@ -19,4 +19,4 @@ export default {
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="less"></style>

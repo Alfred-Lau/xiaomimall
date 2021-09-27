@@ -25,7 +25,7 @@
 export default {};
 </script>
 
-<style lang="scss">
+<style lang="less">
 .service-wrapper {
   height: 84.2px;
   background: #fff;
@@ -51,16 +51,16 @@ export default {};
         display: inline-block;
       }
       .icon-setting {
-        background: url('/imgs/icon-setting.png') no-repeat center;
+        background: url("/imgs/icon-setting.png") no-repeat center;
       }
       .icon-post {
-        background: url('/imgs/icon-post.png') no-repeat center;
+        background: url("/imgs/icon-post.png") no-repeat center;
       }
       .icon-7 {
-        background: url('/imgs/icon-7day.png') no-repeat center;
+        background: url("/imgs/icon-7day.png") no-repeat center;
       }
       .icon-15 {
-        background: url('/imgs/icon-15day.png') no-repeat center;
+        background: url("/imgs/icon-15day.png") no-repeat center;
       }
 
       &-desc {

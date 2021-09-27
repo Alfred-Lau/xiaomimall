@@ -6,14 +6,14 @@
 
 <script>
 export default {
-  name: 'App',
+  name: "App",
   components: {},
 };
 </script>
 
-<style lang="scss">
-@import './assets/scss/reset.scss';
-@import './assets/scss/config.scss';
+<style lang="less">
+@import "./assets/less/reset.less";
+@import "./assets/less/config.less";
 
 #app {
   overflow: hidden;

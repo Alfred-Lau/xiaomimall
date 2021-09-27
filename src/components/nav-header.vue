@@ -14,14 +14,14 @@
           <li class="header-menu-item">登录</li>
           <li class="header-menu-item">注册</li>
           <li class="header-menu-item cart" @click="gotoCart">
-            <i class="iconfont xiaomi-cart "></i> 购物车
+            <i class="iconfont xiaomi-cart"></i> 购物车
           </li>
         </ul>
         <ul class="header-menu" v-else>
           <li class="header-menu-item">{{ username }}</li>
           <li class="header-menu-item">我的订单</li>
           <li class="header-menu-item cart" @click="gotoCart">
-            <i class="iconfont xiaomi-cart "></i> 购物车
+            <i class="iconfont xiaomi-cart"></i> 购物车
           </li>
         </ul>
       </div>
@@ -191,7 +191,7 @@
 
 <script>
 export default {
-  name: 'nav-header',
+  name: "nav-header",
   data() {
     return {
       isLogined: false,
@@ -206,7 +206,7 @@ export default {
   },
   computed: {
     cookie() {
-      return this.$cookie.get('userinfo');
+      return this.$cookie.get("userinfo");
     },
     username() {
       return this.$store.state.username;
@@ -224,16 +224,16 @@ export default {
       const cookie = this.cookie;
       if (!cookie) {
         // 前端重定向到登录页
-        this.$router.push('/login');
+        this.$router.push("/login");
       } else {
-        this.$router.push('/cart');
+        this.$router.push("/cart");
       }
     },
   },
 };
 </script>
 
-<style lang="scss">
+<style lang="less">
 .header {
   background: #333;
   color: #b0b0b0;
@@ -289,7 +289,7 @@ export default {
       align-items: center;
       position: relative;
       .logo-wrapper {
-        background: url('/imgs/logo-mi.png');
+        background: url("/imgs/logo-mi.png");
         background-size: 52px;
         width: 52px;
         height: 52px;

@@ -25,11 +25,11 @@
 
 <script>
 export default {
-  name: 'nav-footer',
+  name: "nav-footer",
 };
 </script>
 
-<style lang="scss">
+<style lang="less">
 .footer {
   height: 233px;
   background: #333;

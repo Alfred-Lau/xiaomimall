@@ -58,48 +58,48 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex';
+import { mapActions } from "vuex";
 
 export default {
-  name: 'login',
+  name: "login",
   data() {
     return {
-      username: '',
-      password: '',
+      username: "",
+      password: "",
     };
   },
   methods: {
-    ...mapActions(['setLoginInfo']),
+    ...mapActions(["setLoginInfo"]),
     onSubmit() {
       /* 处理登录逻辑 */
       const { username, password } = this;
       if (!username || !password) {
-        alert('请输入用户名和密码');
+        alert("请输入用户名和密码");
         return;
       }
 
       /* 模拟数据提交验证 */
-      if (username === 'admin' && password === '123456') {
+      if (username === "admin" && password === "123456") {
         const payload = {
           username,
           password,
         };
         // alert('恭喜，登录成功');
         /* 设置 cookie */
-        this.$cookie.set('userinfo', JSON.stringify(payload), {
-          expire: 'Session',
+        this.$cookie.set("userinfo", JSON.stringify(payload), {
+          expire: "Session",
         });
         this.setLoginInfo(payload);
-        this.$router.push('/');
+        this.$router.push("/");
       } else {
-        alert('登录失败');
+        alert("登录失败");
       }
     },
   },
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="less" scoped>
 .login-container {
   width: 100%;
   background: rgba(255, 255, 255, 1);
@@ -141,7 +141,7 @@ export default {
         }
 
         a.account::after {
-          content: '|';
+          content: "|";
           position: relative;
           left: 50px;
         }
@@ -200,7 +200,7 @@ export default {
           color: rgba(51, 51, 51, 1);
           line-height: 38px;
           &::after {
-            content: '|';
+            content: "|";
             padding-left: 10px;
           }
         }

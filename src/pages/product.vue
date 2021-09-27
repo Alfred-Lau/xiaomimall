@@ -21,9 +21,7 @@
     </div>
     <div class="container">
       <img src="/imgs/product/product-bg-1.png" alt="" />
-      <div class="img-info">
-        我要显示一些信息
-      </div>
+      <div class="img-info">我要显示一些信息</div>
     </div>
     <div class="container middle">
       <img src="/imgs/product/product-bg-2.png" alt="" />
@@ -31,18 +29,12 @@
     <div class="container">
       <img src="/imgs/product/product-bg-3.png" alt="" />
     </div>
-    <div class="container slide-show">
-      我是 slider-show
-    </div>
+    <div class="container slide-show">我是 slider-show</div>
 
     <div class="video-wrapper-container">
       <div class="info">
-        <p>
-          60帧超慢动作摄影
-        </p>
-        <p>
-          慢慢回味每一瞬间的精彩
-        </p>
+        <p>60帧超慢动作摄影</p>
+        <p>慢慢回味每一瞬间的精彩</p>
         <div class="desc">
           后置960帧电影般超慢动作视频，将眨眼间的美妙展现得淋漓尽致！ 更能AI
           精准分析视频内容，15个场景智能匹配背景音效。
@@ -59,9 +51,7 @@
               autoplay="off"
               controls="controls"
             ></video>
-            <div class="close" @click.stop="closeModal">
-              x
-            </div>
+            <div class="close" @click.stop="closeModal">x</div>
           </div>
         </div>
       </div>
@@ -71,7 +61,7 @@
 
 <script>
 export default {
-  name: 'product',
+  name: "product",
   data() {
     return {
       isShowVideo: false,
@@ -80,16 +70,16 @@ export default {
   mounted() {
     const { id } = this.$route.params;
     this.loadData(id);
-    window.addEventListener('scroll', this.toggleFixed);
+    window.addEventListener("scroll", this.toggleFixed);
   },
   methods: {
     toggleFixed() {},
-    closeModal(e) {
-      console.log('sss');
+    closeModal() {
+      console.log("sss");
       this.isShowVideo = false;
     },
     showVideo() {
-      console.log('show');
+      console.log("show");
       this.isShowVideo = true;
     },
     loadData(id) {
@@ -99,7 +89,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="less">
 .all-area {
   .product {
     width: 1226px;
@@ -139,7 +129,7 @@ export default {
               padding-right: 12px;
             }
             li + li::before {
-              content: '|';
+              content: "|";
               padding-right: 6px;
             }
           }
