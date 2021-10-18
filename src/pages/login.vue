@@ -51,7 +51,7 @@
         </ul>
       </div>
       <div class="footer-bottom">
-        <p class="desc">十年挑灯看剑</p>
+        <p class="desc">烽火彼岸</p>
       </div>
     </footer>
   </div>

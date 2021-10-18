@@ -18,7 +18,7 @@
           <a href="">小程序</a><span>|</span>
         </li>
       </ul>
-      <p class="footer-link-copyright">Copyright@2020-现在 十年挑灯看剑</p>
+      <p class="footer-link-copyright">Copyright@2020-现在 烽火彼岸</p>
     </div>
   </div>
 </template>

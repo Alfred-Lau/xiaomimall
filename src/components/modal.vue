@@ -3,18 +3,18 @@
 </template>
 
 <script>
-import { reactive } from '@vue/composition-api';
+import { reactive } from "@vue/composition-api";
 
 export default {
   setup() {
     const person = reactive({
-      name: 'liujian',
-      skill: 'cool',
+      name: "liujian",
+      skill: "cool",
     });
 
     /* 不能是箭头函数，原因？ */
     function changeName() {
-      person.name = Math.random() > 0.5 ? 'xiaoxiang' : 'hero';
+      person.name = Math.random() > 0.5 ? "xiaoxiang" : "hero";
     }
 
     return {
@@ -25,4 +25,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="less">
+.modal {
+  width: 100%;
+}
+</style>
