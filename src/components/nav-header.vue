@@ -16,7 +16,7 @@
           <li class="header-menu-item cart" @click="gotoCart">
             <i class="iconfont xiaomi-cart"></i> 购物车
           </li>
-          <li>
+          <li class="header-menu-item avatar">
             <img
               :src="this.user.avatar"
               alt="avatar"
@@ -202,14 +202,12 @@ export default {
   name: "nav-header",
   data() {
     return {
-      isLogined: false,
+      isLogined: true,
       user: {},
     };
   },
   async mounted() {
-    this.$$storage.setItem("name", "liushanzhuo", "users");
     this.user = await this.$$http("/api/user/info");
-    console.log(this.user);
     if (this.user) {
       this.isLogined = true;
     }
@@ -282,6 +280,16 @@ export default {
           padding-left: 18px;
           padding-right: 18px;
           color: #fff;
+        }
+
+        li.avatar {
+          height: 40 px;
+          padding: 3 px;
+          box-sizing: border-box;
+        }
+
+        .avatar {
+          height: calc(100% - 6 px);
         }
       }
     }
