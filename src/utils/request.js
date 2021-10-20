@@ -3,7 +3,7 @@ import Cookie from "js-cookie";
 
 // 创建 axios 实例
 const axios = Axios.create({
-  baseURL: "http://localhost:3000",
+  baseURL: process.env.NODE_ENV !== "production" ? "http://localhost:3000" : "",
   // baseURL: process.env.VUE_APP_API, // 基础url,如果是多环境配置这样写，也可以像下面一行的写死。 // baseURL: 'http://168.192.0.123',
   timeout: 6000, // 请求超时时间
   headers: {
