@@ -115,10 +115,6 @@ import "swiper/dist/css/swiper.css";
 
 export default {
   name: "index",
-  created() {
-    this.$$storage.setItem("name", "liushanzhuo", "users");
-    // alert(this.$$storage.getItem('name', 'users'));
-  },
   data() {
     return {
       /* 这个就比较吊了 */

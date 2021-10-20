@@ -11,15 +11,23 @@
       </div>
       <div class="header-top-right">
         <ul class="header-menu" v-if="isLogined">
-          <li class="header-menu-item">登录</li>
-          <li class="header-menu-item">注册</li>
+          <li class="header-menu-item">{{ username }}</li>
+          <li class="header-menu-item">我的订单</li>
           <li class="header-menu-item cart" @click="gotoCart">
             <i class="iconfont xiaomi-cart"></i> 购物车
           </li>
+          <li>
+            <img
+              :src="this.user.avatar"
+              alt="avatar"
+              width="40px"
+              class="header-menu-item avatar"
+            />
+          </li>
         </ul>
         <ul class="header-menu" v-else>
-          <li class="header-menu-item">{{ username }}</li>
-          <li class="header-menu-item">我的订单</li>
+          <li class="header-menu-item">登录</li>
+          <li class="header-menu-item">注册</li>
           <li class="header-menu-item cart" @click="gotoCart">
             <i class="iconfont xiaomi-cart"></i> 购物车
           </li>
@@ -195,13 +203,15 @@ export default {
   data() {
     return {
       isLogined: false,
+      user: {},
     };
   },
-  mounted() {
-    const cookie = JSON.parse(this.cookie);
-    if (cookie) {
-      console.log(cookie);
-      this.reloadUserInfo(cookie);
+  async mounted() {
+    this.$$storage.setItem("name", "liushanzhuo", "users");
+    this.user = await this.$$http("/api/user/info");
+    console.log(this.user);
+    if (this.user) {
+      this.isLogined = true;
     }
   },
   computed: {

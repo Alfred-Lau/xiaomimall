@@ -78,6 +78,10 @@ export default {
         return;
       }
 
+      // this.login({ username, password }).then((res) => {
+      //   console.log("res", res);
+      // });
+
       /* 模拟数据提交验证 */
       if (username === "admin" && password === "123456") {
         const payload = {
