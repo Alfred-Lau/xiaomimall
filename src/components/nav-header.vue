@@ -283,8 +283,8 @@ export default {
         }
 
         li.avatar {
-          height: 40 px;
-          padding: 3 px;
+          height: 40px;
+          padding: 3px;
           box-sizing: border-box;
         }
 
