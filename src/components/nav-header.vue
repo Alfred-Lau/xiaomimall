@@ -289,7 +289,7 @@ export default {
         }
 
         .avatar {
-          height: calc(100% - 6 px);
+          height: calc(100% - 6px);
         }
       }
     }
