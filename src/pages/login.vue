@@ -2,15 +2,15 @@
   <div class="login-container">
     <header>
       <div class="header-img">
-        <img src="/imgs/login-logo.png" alt="" />
+        <img src="/imgs/login-logo.png" alt="" @click="goHome" />
       </div>
     </header>
     <div class="container">
       <img src="/imgs/login-bg.jpg" alt="" />
       <div class="login">
         <div class="login-type">
-          <a href="" class="account">账号登录</a>
-          <a href="">扫码登录</a>
+          <a class="account">账号登录</a>
+          <a>扫码登录</a>
         </div>
         <div class="login-area">
           <input
@@ -99,6 +99,9 @@ export default {
         alert("登录失败");
       }
     },
+    goHome() {
+      this.$router.push("/");
+    },
   },
 };
 </script>
@@ -111,6 +114,11 @@ export default {
     width: 1220px;
     height: 112px;
     margin: 0 auto;
+    .header-img {
+      &:hover {
+        cursor: pointer;
+      }
+    }
   }
   .container {
     width: 100%;

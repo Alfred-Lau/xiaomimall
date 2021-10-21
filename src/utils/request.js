@@ -14,10 +14,9 @@ const axios = Axios.create({
 /* 接口错误拦截 */
 axios.interceptors.response.use(
   (response) => {
-    console.log("response", response);
     if (response.status === 200) {
       return response.data;
-    } else if (response.status === 10) {
+    } else if (response.status === 401) {
       /* 自定义业务代码 */
       window.location.href = "/#/login";
     } else {
@@ -26,7 +25,9 @@ axios.interceptors.response.use(
     }
   },
   (error) => {
-    console.log(error);
+    console.error(error.response.status);
+    // 删除authoriaztion 信息
+    Cookie.remove("authorization");
   }
 );
 

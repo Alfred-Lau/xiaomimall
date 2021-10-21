@@ -198,18 +198,23 @@
 </template>
 
 <script>
+import Cookie from "js-cookie";
+
 export default {
   name: "nav-header",
   data() {
     return {
-      isLogined: true,
+      isLogined: false,
       user: {},
     };
   },
   async mounted() {
-    this.user = await this.$$http("/api/user/info");
-    if (this.user) {
-      this.isLogined = true;
+    const authoriaztion = Cookie.get("authoriaztion");
+    if (authoriaztion) {
+      this.user = await this.$$http("/api/user/info");
+      if (this.user) {
+        this.isLogined = true;
+      }
     }
   },
   computed: {
