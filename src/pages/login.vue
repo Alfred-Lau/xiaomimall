@@ -83,7 +83,7 @@ export default {
       // });
 
       /* 模拟数据提交验证 */
-      if (username === "admin" && password === "123456") {
+      if (username === "boss" && password === "123456") {
         const payload = {
           username,
           password,

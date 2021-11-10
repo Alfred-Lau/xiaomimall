@@ -1,7 +1,7 @@
 <template>
   <div class="cart">
     <order-header title="我的购物车">
-      <template v-slot:tip>
+      <template #tip>
         <span>温馨提示：产品是否购买成功，以最终下单为准哦，请尽快结算</span>
       </template>
     </order-header>
@@ -168,8 +168,11 @@ export default {
 .cart {
   .wrapper {
     background-color: #f5f5f5;
+    max-width: 1226px;
+    margin: 0 auto;
     padding-top: 30px;
     padding-bottom: 114px;
+
     .cart-box {
       background-color: #fff;
       font-size: 14px;
