@@ -3279,9 +3279,9 @@
   "resolved" "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.3.850.tgz"
   "version" "1.3.850"
 
-"element-ui@^2.15.5":
-  "integrity" "sha512-rcYXEKd/j2G0AgficAOk1Zd1AsnHRkhmrK4yLHmNOiimU2JfsywgfKUjMoFuT6pQx0luhovj8lFjpE4Fnt58Iw=="
-  "resolved" "https://registry.npmjs.org/element-ui/-/element-ui-2.15.6.tgz"
+"element-ui@^2.15.6":
+  "integrity" "sha1-yWCa3TWvWmhqS3aF3B11fHXgHfM="
+  "resolved" "https://registry.npmmirror.com/element-ui/download/element-ui-2.15.6.tgz"
   "version" "2.15.6"
   dependencies:
     "async-validator" "~1.8.1"

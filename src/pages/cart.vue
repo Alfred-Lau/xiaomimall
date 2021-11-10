@@ -7,54 +7,34 @@
     </order-header>
     <div class="wrapper">
       <div class="container">
-        <div class="cart-box">
-          <ul class="cart-item-head">
-            <li class="col-1">
-              <span
-                class="checkbox"
-                v-bind:class="{ checked: allChecked }"
-                @click="toggleAll"
-              ></span
-              >全选
-            </li>
-            <li class="col-3">商品名称</li>
-            <li class="col-1">单价</li>
-            <li class="col-2">数量</li>
-            <li class="col-1">小计</li>
-            <li class="col-1">操作</li>
-          </ul>
-          <ul class="cart-item-list">
-            <li
-              class="cart-item"
-              v-for="(item, index) in list"
-              v-bind:key="index"
-            >
-              <div class="item-check">
-                <span
-                  class="checkbox"
-                  v-bind:class="{ checked: item.productSelected }"
-                  @click="updateCart(item)"
-                ></span>
-              </div>
-              <div class="item-name">
-                <img v-lazy="item.productMainImage" alt="" />
-                <span>{{
-                  item.productName + " , " + item.productSubtitle
-                }}</span>
-              </div>
-              <div class="item-price">{{ item.productPrice }}</div>
-              <div class="item-num">
-                <div class="num-box">
-                  <a href="javascript:;" @click="updateCart(item, '-')">-</a>
-                  <span>{{ item.quantity }}</span>
-                  <a href="javascript:;" @click="updateCart(item, '+')">+</a>
-                </div>
-              </div>
-              <div class="item-total">{{ item.productTotalPrice }}</div>
-              <div class="item-del" @click="delProduct(item)"></div>
-            </li>
-          </ul>
-        </div>
+        <el-table
+          ref="multipleTable"
+          :data="list"
+          tooltip-effect="dark"
+          style="width: 100%"
+          @selection-change="handleSelectionChange"
+        >
+          <el-table-column type="selection" width="55"> </el-table-column>
+          <el-table-column label="商品名称" width="120">
+            <template slot-scope="scope">{{ scope.row.date }}</template>
+          </el-table-column>
+          <el-table-column prop="name" label="单价" width="120">
+          </el-table-column>
+          <el-table-column prop="address" label="数量" show-overflow-tooltip>
+          </el-table-column>
+          <el-table-column prop="address" label="小计" show-overflow-tooltip>
+          </el-table-column>
+          <el-table-column label="操作" align="left">
+            <template slot-scope="scope">
+              <el-button
+                size="mini"
+                type="danger"
+                @click="handleDelete(scope.$index, scope.row)"
+                >删除</el-button
+              >
+            </template>
+          </el-table-column>
+        </el-table>
         <div class="order-wrap clearfix">
           <div class="cart-tip fl">
             <a href="/#/index">继续购物</a>
@@ -87,7 +67,43 @@ export default {
   },
   data() {
     return {
-      list: [], //商品列表
+      list: [
+        {
+          date: "2016-05-03",
+          name: "王小虎",
+          address: "上海市普陀区金沙江路 1518 弄",
+        },
+        {
+          date: "2016-05-02",
+          name: "王小虎",
+          address: "上海市普陀区金沙江路 1518 弄",
+        },
+        {
+          date: "2016-05-04",
+          name: "王小虎",
+          address: "上海市普陀区金沙江路 1518 弄",
+        },
+        {
+          date: "2016-05-01",
+          name: "王小虎",
+          address: "上海市普陀区金沙江路 1518 弄",
+        },
+        {
+          date: "2016-05-08",
+          name: "王小虎",
+          address: "上海市普陀区金沙江路 1518 弄",
+        },
+        {
+          date: "2016-05-06",
+          name: "王小虎",
+          address: "上海市普陀区金沙江路 1518 弄",
+        },
+        {
+          date: "2016-05-07",
+          name: "王小虎",
+          address: "上海市普陀区金沙江路 1518 弄",
+        },
+      ], //商品列表
       allChecked: false, //是否全选
       cartTotalPrice: 0, //商品总金额
       checkedNum: 0, //选中商品数量
